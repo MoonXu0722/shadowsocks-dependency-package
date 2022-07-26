@@ -15,3 +15,4 @@ This system doesn't provide enough entropy to quickly generate high-quality rand
 sudo apt-get install rng-tools
 
 sudo rngd -r /dev/urandom
+公网ip ping不通，网络与安全-》安全组-》入站规则-》编辑入站规则-》类型（所有流量）-》保存规则   ok
