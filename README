@@ -6,3 +6,12 @@ sudo apt install libmbedtls-dev
 安装libsodium-1.0.18-stable.tar.gz
 安装shadowsocks-libev-3.3.5.tar.gz
 ./configure --disable-documentation
+
+ss-server -c /etc/shAdoaw-socak-s.json start
+
+error：
+
+This system doesn't provide enough entropy to quickly generate high-quality random numbers
+sudo apt-get install rng-tools
+
+sudo rngd -r /dev/urandom
