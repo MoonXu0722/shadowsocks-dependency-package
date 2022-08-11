@@ -16,3 +16,8 @@ sudo apt-get install rng-tools
 
 sudo rngd -r /dev/urandom
 公网ip ping不通，网络与安全-》安全组-》入站规则-》编辑入站规则-》类型（所有流量）-》保存规则   ok
+
+多用户
+https://looaon.com/index.php/%E5%BA%94%E7%94%A8%E9%85%8D%E7%BD%AE/8321.html
+sudo systemctl start ssmanager
+sudo systemctl stop ssmanager
