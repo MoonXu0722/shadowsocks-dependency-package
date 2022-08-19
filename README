@@ -21,3 +21,15 @@ sudo rngd -r /dev/urandom
 https://looaon.com/index.php/%E5%BA%94%E7%94%A8%E9%85%8D%E7%BD%AE/8321.html
 sudo systemctl start ssmanager
 sudo systemctl stop ssmanager
+
+ssmanager.service
+[Unit]
+Description=Shadowsocks Manager Server
+[Service]
+User=root
+Group=root
+Type=simple
+ExecStart=/usr/local/bin/ss-manager --manager-address /var/run/shadowsocks-manager.sock -c /etc/shadowsocks/multi_config.json start
+ExecStop=/usr/local/bin/ss-manager --manager-address /var/run/shadowsocks-manager.sock -c /etc/shadowsocks/multi_config.json stop
+[Install]
+WantedBy=multi-user.target
