@@ -1,0 +1,10 @@
+[Unit]
+Description=Shadowsocks Manager Server
+[Service]
+User=root
+Group=root
+Type=simple
+ExecStart=/usr/local/bin/ss-manager --manager-address /var/run/shadowsocks-manager.sock -c /etc/shadowsocks/multi_config.json start
+ExecStop=/usr/local/bin/ss-manager --manager-address /var/run/shadowsocks-manager.sock -c /etc/shadowsocks/multi_config.json stop
+[Install]
+WantedBy=multi-user.target
